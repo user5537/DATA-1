@@ -19,7 +19,7 @@ if (d==1)
         if
                         (miesioc>12 || (((miesioc == 1||3||5||7||8||10||12) && (dzien > 31)) ||
 
-                         ((miesioc == 2) && (dzien > 30)) ||
+                         ((miesioc == 2) && (dzien > 29)) ||
 
                          ((miesioc == 4) && (dzien > 30)) ||
 
@@ -40,11 +40,11 @@ else return true;
 }
 
 if (d==2)
-    {
+   {
         if
                         (miesioc>12 || (((miesioc == 1||3||5||7||8||10||12) && (dzien > 31)) ||
 
-                         ((miesioc == 2) && (dzien > 29)) ||
+                         ((miesioc == 2) && (dzien > 28)) ||
 
                          ((miesioc == 4) && (dzien > 30)) ||
 
@@ -52,10 +52,16 @@ if (d==2)
 
                          ((miesioc == 9) && (dzien > 30)) ||
 
-                         ((miesioc == 11) && (dzien > 30))  ))
+                          ((miesioc == 11) && (dzien > 30))  ))
 
 
                              return false;
+
+
+
+
+
+else return true;
 }
 }
 #define TEST(dzien, miesioc, rok)
@@ -72,7 +78,7 @@ void testdaty()
     if (data(24,13,2014) !=false) cout<<"error 4"<<endl;
 }
 
-#undef TEST
+//#undef TEST
 
 int main()
 {
